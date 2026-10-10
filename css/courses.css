@@ -1,0 +1,298 @@
+#courses{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem;
+}
+
+.courses-badge{
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    border-radius: 0.5rem;
+    background-color: var(--primary1);
+    color: var(--text-light);
+    padding: 0 0.5rem;
+    border: 1px solid var(--text-dark);
+    transform: rotate(2deg);
+    margin-bottom: 2rem;
+}
+
+.grid1{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid1 .card{
+    width: 12rem;
+    height: 11rem;
+    background: rgb(0 52 112 / 5%);
+    border: 1px solid rgb(0 52 112 / 25%);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 0.5rem;
+}
+
+.grid1 .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary1);
+    box-shadow: 0 12px 25px rgb(0 52 112 / 12%);
+    cursor: pointer;
+}
+
+.grid1 .card h3{
+    color: var(--primary1);
+}
+
+.grid1 .card p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+.tools{
+    width: 30%;
+    height: 90%;
+    background-color: var(--primary1);
+    border-radius: 1.5rem;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.mdl-strip{
+    width: 110%;
+    background-color: var(--primary2);
+    padding: 0.2rem 2rem;
+    transform: rotate(-1.5deg);
+    margin-bottom: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mdl-strip h3{
+    font-size: 1.5rem;
+    letter-spacing: -1.5px;
+    font-weight: 900;
+}
+
+.mdl-strip p{
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.tool-img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    position: absolute;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite;
+}
+
+.tools > div {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+@keyframes float {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -12px;
+    }
+}
+
+.tool1 {
+    top: 8%;
+    left: 12%;
+    transform: rotate(-12deg);
+    animation-delay: 0s;
+}
+
+.tool2 {
+    top: 22%;
+    left: 58%;
+    transform: rotate(10deg);
+    animation-delay: -0.8s;
+}
+
+.tool3 {
+    top: 42%;
+    left: 28%;
+    transform: rotate(-7deg);
+    animation-delay: -1.5s;
+}
+
+.tool4 {
+    top: 12%;
+    left: 78%;
+    transform: rotate(14deg);
+    animation-delay: -0.4s;
+}
+
+.tool5 {
+    top: 48%;
+    left: 68%;
+    transform: rotate(-11deg);
+    animation-delay: -2s;
+}
+
+.tool6 {
+    top: 68%;
+    left: 10%;
+    transform: rotate(8deg);
+    animation-delay: -1.1s;
+}
+
+.tool7 {
+    top: 3%;
+    left: 40%;
+    transform: rotate(-15deg);
+    animation-delay: -2.5s;
+}
+
+.tool8 {
+    top: 80%;
+    left: 78%;
+    transform: rotate(12deg);
+    animation-delay: -0.6s;
+}
+
+.tool9 {
+    top: 80%;
+    left: 45%;
+    transform: rotate(-6deg);
+    animation-delay: -1.8s;
+}
+
+.tool10 {
+    top: 35%;
+    left: 5%;
+    transform: rotate(9deg);
+    animation-delay: -1.3s;
+}
+
+@media (max-width: 1100px) {
+    .tools{
+        width: 50%;
+        height: 90%;
+        background-color: var(--primary1);
+        border-radius: 1.5rem;
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .tool-img{
+        border-radius: 0.8rem;
+        position: absolute;
+        border-radius: 1rem;
+        object-fit: cover;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .tool1  { animation-delay: 0s; }
+    .tool2  { animation-delay: -0.8s; }
+    .tool3  { animation-delay: -1.5s; }
+    .tool4  { animation-delay: -0.4s; }
+    .tool5  { animation-delay: -2s; }
+    .tool6  { animation-delay: -1.1s; }
+    .tool7  { animation-delay: -2.5s; }
+    .tool8  { animation-delay: -0.6s; }
+    .tool9  { animation-delay: -1.8s; }
+    .tool10 { animation-delay: -1.3s; }
+    
+    .grid1{
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .grid1 .card{
+        width: 9rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .grid1 .card p{
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    #courses{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main{
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .grid1{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .courses-badge{
+        margin-bottom: 1rem;
+    }
+
+    .grid1 .card{
+        width: 100%;
+        height: 3rem;
+    }
+
+    .tools{
+        width: 100%;
+    }
+
+    body.is-mobile .grid1 .card h3{
+        font-size: 1.2rem;
+    }
+
+    body.is-mobile .grid1{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body.is-mobile .grid1 .card{
+        height: 4rem;
+    }
+
+    body.is-mobile .tool-img{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
+    }
+}
+
+

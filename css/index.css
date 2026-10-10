@@ -1,0 +1,117 @@
+/* 1. CUSTOM FONTS */
+@font-face {
+    font-family: eng;
+    src: url("../fonts/Arimo-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: beng;
+    src: url("../fonts/Li Purno Pran ANSI V2.ttf")
+         format("truetype");
+}
+
+/* 2. GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: 0.25s;
+}
+
+/* 3. ROOT VARIABLES */
+:root {
+    --primary1: #003470;
+    --primary2: #00A74F;
+
+    --text-light: #ffffff;
+    --text-dark: #000000;
+
+    --accent: #FFEC00;
+    --inactive: #9E9E9E;
+}
+
+
+/* 4. DOCUMENT & BODY */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: eng;
+    font-weight: 400;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. MAIN CONTENT */
+main {
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+/* 6. SHARED UTILITIES */
+.hide {
+    display: none !important;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: eng;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* 7. FOOTER */
+footer {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0 0.5rem 0;
+    border-top: 1px solid rgb(0 52 112 / 25%);
+}
+
+.dev {
+    font-weight: 600;
+    color: var(--primary2);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* 8. MOBILE-ONLY CONTENT */
+.extra-para-for-mob {
+    display: none;
+}
+
+/* 9. FAB Style */
+.slideshow-fab{
+    position: absolute;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary2);
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+    right: 3%;
+    bottom: 4%;
+    outline: none;
+    z-index: 999;
+}

@@ -1,0 +1,180 @@
+/* 1. ABOUT SECTION LAYOUT */
+#about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+/* 2. ABOUT CONTENT WRAPPER */
+.about-wrapper {
+    width: 60%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 3. ABOUT HEADING & DESCRIPTION */
+#about h2 {
+    color: var(--primary1);
+    font-size: 3rem;
+}
+
+#about p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+/* 4. APPROACH BADGE */
+.approach-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    border-radius: 0.5rem;
+    background-color: var(--primary2);
+    padding: 0 0.5rem;
+    border: 1px solid var(--text-dark);
+    transform: rotate(-2deg);
+    margin-bottom: 1rem;
+}
+
+/* 5. APPROACHES CONTAINER & ITEMS */
+.approaches-container {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.approach {
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgb(0 52 112 / 5%);
+    border: 1px solid rgb(0 52 112 / 25%);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.approach:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary1);
+    box-shadow: 0 12px 25px rgb(0 52 112 / 12%);
+    cursor: pointer;
+}
+
+/* 6. ABOUT STRIP */
+.about-strip {
+    position: absolute;
+    left: 0;
+    bottom: 6%;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: var(--primary1);
+    color: var(--text-light);
+    font-size: 1.3rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* 7. RESPONSIVE — MEDIUM SCREENS */
+@media (max-width: 1120px) {
+    .about-wrapper {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .about-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-wrapper {
+        width: 100%;
+    }
+}
+
+/* 8. RESPONSIVE — SMALLER SCREENS */
+@media (max-width: 810px) {
+    .about-wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .approach {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* 9. RESPONSIVE — MOBILE STRIP*/
+@media (max-width: 600px) {
+    .about-strip {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* 10. RESPONSIVE — SMALL MOBILE */
+@media (max-width: 500px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 0.8rem;
+    }
+
+    .approach {
+        font-size: 0.8rem;
+    }
+
+    /* Mobile section spacing */
+    body.is-mobile #about {
+        padding-bottom: 7%;
+    }
+
+    /* Mobile heading */
+    body.is-mobile #about h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Mobile description */
+    body.is-mobile #about p {
+        font-size: 1.1rem;
+    }
+
+    /* Stack approaches vertically */
+    body.is-mobile .approaches-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    body.is-mobile .approach {
+        font-size: 1.3rem;
+    }
+
+    /* Mobile content spacing */
+    body.is-mobile .about-wrapper {
+        gap: 1.5rem;
+    }
+
+    /* Mobile approach badge */
+    body.is-mobile .approach-badge {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+}

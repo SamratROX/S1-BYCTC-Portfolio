@@ -1,0 +1,136 @@
+/* 1. HERO SECTION LAYOUT */
+#hero {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+    gap: 2rem;
+}
+
+/* 2. INSTITUTE BADGE */
+.badge {
+    display: inline-block;
+    width: fit-content;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: -1.5px;
+    border-radius: .5rem;
+    background-color: var(--primary1);
+    color: var(--text-light);
+    padding: .2rem .5rem;
+    border: 1px solid var(--text-dark);
+    transform: rotate(-1deg);
+}
+
+/* 3. HERO HEADING */
+#hero h1 {
+    color: var(--primary1);
+    font-size: 6.5vw;
+    line-height: 1;
+}
+
+/* 4. EXPERIENCE BADGE */
+.experience-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    border-radius: .5rem;
+    background-color: var(--accent);
+    padding: 0 .5rem;
+    border: 1px solid var(--text-dark);
+    transform: rotate(2deg);
+}
+
+/* 5. HERO STRIP */
+.hero-strip {
+    margin-top: 2rem;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: var(--primary1);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Hero strip divider */
+.strip-divider {
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background-color: var(--text-light);
+}
+
+/* 6. RESPONSIVE STYLES */
+@media (max-width: 670px) {
+    #hero {
+        min-height: calc(100dvh - 8rem);
+        height: auto;
+        box-sizing: border-box;
+        padding: 3rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Institute badge */
+    #hero .badge {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+        padding: .4rem .65rem;
+    }
+
+    /* Main heading */
+    body.is-mobile #hero h1 {
+        width: 100%;
+        font-size: clamp(2.3rem, 8.5vw, 3.5rem);
+        line-height: 1.12;
+        letter-spacing: -1.2px;
+    }
+
+    /* Experience heading */
+    body.is-mobile #hero h2 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    /* Hero strip */
+    .hero-strip {
+        width: calc(100% + 2rem);
+        margin: auto 0 0;
+        padding: 1.3rem 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    /* Strip divider */
+    .strip-divider {
+        width: .4rem;
+        height: .4rem;
+        flex-shrink: 0;
+    }
+
+    /* Mobile-only paragraph */
+    body.is-mobile .extra-para-for-mob {
+        display: flex;
+        opacity: 0.7;
+    }
+}
